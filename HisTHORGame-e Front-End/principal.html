@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="midias/icone.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>HisTHORGame-e</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body onload="mainPage()">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- 
+            <div id="carouselExampleInterval" class="carousel slide"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="midias/wallpaper2.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="midias/wallpaper3.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="midias/wallpaper4.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            -->
+
+    <!-- Ranking -->
+    <h4 style="margin-top: 50px;">Ranking</h4>
+    <div class="container" id="ranking">
+
+        <!-- TOP 5 GENERAL -->
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/swords diamong.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">GERAL</h5>
+                <span>os jogadores com mais pontos e completude</span>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush" id="top5-general">
+                
+            </ul>
+        </div>
+
+        <!-- TOP 5 WARRIORS -->
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/shield.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">GUERREIROS</h5>
+                <span>os jogadores com mais pontos</span>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush" id="top5-warriors">
+               
+            </ul>
+        </div>
+
+        <!-- TOP 5 UNIVERSITY -->
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/cla.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">UNIVERSIDADE</h5>
+                <span>as universidades com mais pontos somados</span>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush" id="top5-university">
+               
+            </ul>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <h4>Dashboard</h4>
+    <div class="container">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/map.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">PROGRESSO</h5>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="progress" class="list-group-item">0%</li>
+                <li class="list-group-item"></li>
+            </ul>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/red-flag.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">RESOLVIDO</h5>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="solved" class="list-group-item">0</li>
+                <li class="list-group-item"></li>
+            </ul>
+        </div>
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <img src="midias/coin.png" alt="" height="100px">
+                <p>
+                <h5 class="card-title">PONTOS</h5>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="score" class="list-group-item">0</li>
+                <li class="list-group-item"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Problems -->
+    <h4>Quizzes </h4>
+    <div class="container">
+
+        <div class="card" style="width: 20rem;" id="egito">
+            <img src="midias/mitologia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mitologia Grega</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="html_quizzes/quiz_mitologia_grega.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="egito">
+            <img src="midias/jurassico.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Período Jurássico</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="html_quizzes/quiz_periodo_jurassico.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="egito">
+            <img src="midias/imperio_romano.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Império Romano</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="quiz.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="egito">
+            <img src="midias/idade_media.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Idade Média</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="quiz.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="egito">
+            <img src="midias/egito.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Egito</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="quiz.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="revolucao_industrial">
+            <img src="midias/revolucao_industrial.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Revolução Industrial</h5>
+                <p class="card-text">Uma breve descrição do jogo de história ...</p>
+                <a href="quiz.html" class="btn btn-primary start">Jogar o Game!</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Suporte -->
+    <h4>Suporte</h4>
+    <div class="container">
+
+        <div class="card" style="width: 20rem;" id="revolucao_industrial">
+            <img src="midias/justice.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ajuda</h5>
+                <p class="card-text">Envie sua mensagem para nós e nossa equipe responderá o mais breve possível.</p>
+                <button type="button" class="btn btn-primary start" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo">Obter Ajuda</button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="revolucao_industrial">
+            <img src="midias/library.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">FAQs</h5>
+                <p class="card-text">Veja as respostas para as perguntas mais frequentes do HisTHORGame-e.</p>
+                <button type="button" class="btn btn-primary start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Abrir FAQs
+                  </button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;" id="revolucao_industrial">
+            <img src="midias/sculpture.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Feedback</h5>
+                <p class="card-text">Envie sua mensagem para nós e nossa equipe responderá o mais breve possível.</p>
+                <button type="button" class="btn btn-primary start" onclick="GoogleFormsFeedback()">Fornecer Feedback</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- BOX DIALOG FOR HELP -->
+    <form action="mailto:${email}?subject=${subject}&body=${body}" method="post" enctype="text/plain">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tela de Mensagem</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3" style="width: 100%;">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3" style="width: 100%;">
+                                <label for="subject" class="col-form-label">Assunto:</label>
+                                <input type="text" class="form-control" id="subject">
+                            </div>
+                            <div class="mb-3" style="width: 100%;">
+                                <label for="body" class="col-form-label">Mensagem:</label>
+                                <textarea class="form-control" id="body"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">                    
+                        <button type="button" class="btn btn-primary start" style="margin: auto;">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- BOX DIALOG FOR FAQs  -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Perguntas Mais Frequentes</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2022 HisTHORGame-e - Akoni Global - Gustavo Esteves<br>Icons from Flaticon
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- NAVBAR -->
+    <script src="javascript/navbar.js"></script>
+
+    <!-- NODE JS -->
+    <script src="javascript/script_node.js"></script>
+
+    <script>
+        function GoogleFormsFeedback(){
+            document.location.href = "https://docs.google.com/forms/d/1FKCelXdFxL_W0DSAKNleASMWAJbV4VZxiIu1WMrje7U/prefill"
+        }
+        function SendHelpEmail(){
+            let email = document.querySelector("#email").value;
+            let subject = document.querySelector("#subject").value;
+            let body = document.querySelector("#body").value;
+            parent.location(`mailto:${email}?subject=${subject}&body=${body}`);
+        }
+    </script>
+
+</body>
+
+</html>
